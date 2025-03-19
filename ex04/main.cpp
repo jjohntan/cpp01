@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:05:56 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/19 19:00:04 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/19 19:55:38 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int main(int ac, char **av)
 			std::cout << before << std::endl;
 			after = line.substr(pos + s1.length());
 			std::cout << after << std::endl;
+			line = before + s2 + after;
 		}
 		outfile << line << std::endl;
 	}
