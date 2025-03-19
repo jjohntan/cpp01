@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:05:56 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/19 18:38:55 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/19 19:00:04 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int main(int ac, char **av)
 	std::string line;
 	size_t pos;
 	std::string before;
+	std::string after;
 	while (getline(infile, line))
 	{
 		pos = line.find(s1);
@@ -42,6 +43,8 @@ int main(int ac, char **av)
 		{
 			before = line.substr(0, pos);
 			std::cout << before << std::endl;
+			after = line.substr(pos + s1.length());
+			std::cout << after << std::endl;
 		}
 		outfile << line << std::endl;
 	}
