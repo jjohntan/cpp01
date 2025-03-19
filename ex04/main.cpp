@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:05:56 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/17 17:34:58 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/19 15:18:49 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 #include <iostream>
 #include <string>
 
-int main()
+int main(int ac, char **av)
 {
-	std::ifstream infile("infile.txt");
-	std::ofstream outfile("outfile.txt");
-	std::string str;
+	(void)ac;
+	std::ifstream infile(av[1]);
+	std::ofstream outfile("test.txt.replace");
+	std::string line;
 	
-	while (getline(infile, str))
+	while (getline(infile, line))
 	{
-		outfile << str << std::endl;
+		outfile << line << std::endl;
 	}
 }
