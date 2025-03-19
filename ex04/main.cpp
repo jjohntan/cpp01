@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:05:56 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/19 17:20:21 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/19 17:26:56 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ int main(int ac, char **av)
 		std::cerr << "Error failed to create file" << std::endl;
 		return (1);
 	}
-	std::string s1;
-	std::string s2;
+	std::string s1 = av[2];
+	std::cout << s1 << std::endl;
+	std::string s2 = av[3];
+	std::cout << s2 << std::endl;
 	std::string line;
 	
 	while (getline(infile, line))
