@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/20 16:53:57 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/20 17:05:07 by jetan            ###   ########.fr       */
+/*   Created: 2025/03/20 16:52:25 by jetan             #+#    #+#             */
+/*   Updated: 2025/03/20 19:26:41 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#include "Harl.hpp"
+#include <iostream>
 
-#include <string>
-
-class Harl
+Harl::Harl()
 {
-	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
-	public:
-		Harl();
-		~Harl();
-		void complain( std::string level );
-};
+}
 
-#endif
+Harl::~Harl()
+{
+}
+
+void Harl::debug()
+{
+	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!" << std::endl;
+}
+
+void Harl::complain( std::string level )
+{
+	if (level == "DEBUG")
+		this->debug();
+}

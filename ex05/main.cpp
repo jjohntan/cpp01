@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/20 16:53:57 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/20 17:05:07 by jetan            ###   ########.fr       */
+/*   Created: 2025/03/20 16:53:54 by jetan             #+#    #+#             */
+/*   Updated: 2025/03/20 19:25:53 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#include "Harl.hpp"
 
-#include <string>
-
-class Harl
+int main()
 {
-	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
-	public:
-		Harl();
-		~Harl();
-		void complain( std::string level );
-};
-
-#endif
+	Harl harl;
+	
+	harl.complain("DEBUG");
+}
