@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:52:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/20 20:15:01 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/20 20:17:37 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ void Harl::warning( void )
 	std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << std::endl;
 }
 
+void Harl::error( void )
+{
+	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
+}
+
 void Harl::complain( std::string level )
 {
 	if (level == "DEBUG")
@@ -44,4 +49,6 @@ void Harl::complain( std::string level )
 		this->info();
 	else if (level == "WARNING")
 		this->warning();
+	else if (level == "ERROR")
+		this->error();
 }
