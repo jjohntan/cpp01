@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:05:56 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/19 19:55:38 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/20 14:55:39 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,14 @@ int main(int ac, char **av)
 	while (getline(infile, line))
 	{
 		pos = line.find(s1);
-		if (pos != std::string::npos)
+		while (pos != std::string::npos)
 		{
 			before = line.substr(0, pos);
 			std::cout << before << std::endl;
 			after = line.substr(pos + s1.length());
 			std::cout << after << std::endl;
 			line = before + s2 + after;
+			pos = line.find(s1, pos + s2.length());//search for the next occurence
 		}
 		outfile << line << std::endl;
 	}
