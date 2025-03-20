@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:53:54 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/20 19:25:53 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/20 20:17:54 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int main()
 {
 	Harl harl;
 	
-	harl.complain("DEBUG");
+	harl.complain("ERROR");
 }

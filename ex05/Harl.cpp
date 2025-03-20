@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:52:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/20 20:17:37 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/20 20:34:25 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,7 @@ void Harl::complain( std::string level )
 		this->warning();
 	else if (level == "ERROR")
 		this->error();
+	
+	void (Harl::*ptr)(void);
+	
 }
