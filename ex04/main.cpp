@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:05:56 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/20 14:55:39 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/20 15:13:43 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@
 
 int main(int ac, char **av)
 {
-	(void)ac;
+	if (ac != 4)
+	{
+		std::cerr << " program takes three parameters" << std::endl;
+		return (1);
+	}
 	std::ifstream infile(av[1]);
 	if (!infile)
 	{
@@ -31,6 +35,11 @@ int main(int ac, char **av)
 		return (1);
 	}
 	std::string s1 = av[2];
+	if (s1.empty())
+	{
+		std::cout << "Error s1 is empty" << std::endl;
+		return (1);
+	}
 	std::string s2 = av[3];
 	std::string line;
 	size_t pos;
@@ -42,9 +51,7 @@ int main(int ac, char **av)
 		while (pos != std::string::npos)
 		{
 			before = line.substr(0, pos);
-			std::cout << before << std::endl;
 			after = line.substr(pos + s1.length());
-			std::cout << after << std::endl;
 			line = before + s2 + after;
 			pos = line.find(s1, pos + s2.length());//search for the next occurence
 		}
