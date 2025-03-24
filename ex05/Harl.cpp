@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:52:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/20 20:34:25 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/24 17:06:05 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,19 @@ void Harl::error( void )
 
 void Harl::complain( std::string level )
 {
-	if (level == "DEBUG")
-		this->debug();
-	else if (level == "INFO")
-		this->info();
-	else if (level == "WARNING")
-		this->warning();
-	else if (level == "ERROR")
-		this->error();
-	
-	void (Harl::*ptr)(void);
-	
+	//pointers to member functions
+	void (Harl::*ptr[4])() = {&Harl::debug,
+		&Harl::info, &Harl::warning, &Harl::error
+	};
+
+	std::string ptr_lst[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (level == ptr_lst[i])
+		{
+			(this->*ptr[i])();
+			break;
+		}
+	}
 }
