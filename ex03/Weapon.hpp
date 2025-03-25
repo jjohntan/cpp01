@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 14:20:36 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/14 16:43:43 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/25 14:58:02 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Weapon
 	private:
 		std::string type;
 	public:
-		Weapon();
 		Weapon(std::string type);
 		~Weapon();
 		//setter function
