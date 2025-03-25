@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 15:33:50 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/17 14:24:37 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/25 15:26:06 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ HumanA::~HumanA()
 
 void HumanA::attack()
 {
-	std::cout << this->name << " attacks with their " << _Weapon.getType() << std::endl;
+	std::cout << name << " attacks with their " << _Weapon.getType() << std::endl;
 }

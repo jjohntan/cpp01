@@ -6,17 +6,19 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:52:25 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/24 17:06:05 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/25 15:29:20 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 #include <iostream>
 
+//constructor
 Harl::Harl()
 {
 }
 
+//destructor
 Harl::~Harl()
 {
 }

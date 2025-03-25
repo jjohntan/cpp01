@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:53:57 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/20 17:05:07 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/25 15:28:50 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Harl
 		void warning( void );
 		void error( void );
 	public:
-		Harl();
-		~Harl();
+		Harl();//constructor
+		~Harl();//destructor
 		void complain( std::string level );
 };
 

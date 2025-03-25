@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 21:46:17 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/10 11:19:53 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/24 17:14:34 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class Zombie
 private:
 	std::string name;
 public:
-	Zombie(std::string name);
-	~Zombie();
+	Zombie(std::string name);//constructor
+	~Zombie();//destructor
 	void announce( void );
 };
 
