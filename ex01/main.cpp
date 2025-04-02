@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:06:22 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/14 13:40:47 by jetan            ###   ########.fr       */
+/*   Updated: 2025/04/02 15:00:56 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 int main()
 {
 	Zombie *zombie = zombieHorde(4, "Foo");
-	delete[] zombie;
+	delete[] zombie;//deallocate an array of object
 }

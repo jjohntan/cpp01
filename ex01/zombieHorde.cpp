@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:07:40 by jetan             #+#    #+#             */
-/*   Updated: 2025/03/14 13:41:22 by jetan            ###   ########.fr       */
+/*   Updated: 2025/03/27 16:52:46 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 Zombie* zombieHorde( int N, std::string name )
 {
-	Zombie *horde = new Zombie[N];
+	Zombie *horde = new Zombie[N];//allocate N Zombie objects
+	
 	for (int i = 0; i < N; i++)
 	{
 		horde[i].setname(name);
